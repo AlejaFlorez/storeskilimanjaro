@@ -15,29 +15,44 @@ public class Producto {
     private String nombre;
     @Column(name="foto")
     private String foto;
+    @Column(name="descripcion")
     private String descripcion;
+    @Column(name="cantidad")
     private Integer cantidad;
+    @Column(name="precioUnitario")
     private Double precioUnitario;
+    @Column(name="clasificacion")
     private String clasificacion;
+    @Column(name="marca")
     private String marca;
+    @Column(name="presentacion")
     private String presentacion;
+    @Column(name="peso")
     private Double peso;
+    @Column(name="estado")
     private Boolean estado;
+    @Column(name="proveedor")
     private String proveedor;
+    @Column(name="volumen")
     private Double volumen;
+    @Column(name="fechaIngreso")
     private String fechaIngreso;
+    @Column(name="fechaVencimiento")
     private String fechaVencimiento;
+    @Column(name="aplicaDescuento")
     private Boolean aplicaDescuento;
+    @Column(name="IVA")
+    private String IVA;
+
 
     public Producto() {
 
     }
 
-    public Producto(String foto) {
-        this.foto = foto;
-    }
 
-    public Producto(Integer id, String nombre, String foto, String descripcion, Integer cantidad, Double precioUnitario, String clasificacion, String marca, String presentacion, Double peso, Boolean estado, String proveedor, Double volumen, String fechaIngreso, String fechaVencimiento, Boolean aplicaDescuento) {
+
+
+        public Producto(Integer id, String nombre, String foto, String descripcion, Integer cantidad, Double precioUnitario, String clasificacion, String marca, String presentacion, Double peso, Boolean estado, String proveedor, Double volumen, String fechaIngreso, String fechaVencimiento, Boolean aplicaDescuento, String IVA) {
         this.id = id;
         this.nombre = nombre;
         this.foto = foto;
@@ -54,6 +69,7 @@ public class Producto {
         this.fechaIngreso = fechaIngreso;
         this.fechaVencimiento = fechaVencimiento;
         this.aplicaDescuento = aplicaDescuento;
+        this.IVA = IVA;
 
     }
 
@@ -184,4 +200,12 @@ public class Producto {
     public void setAplicaDescuento(Boolean aplicaDescuento) {
         this.aplicaDescuento = aplicaDescuento;
     }
-}
+
+        public String getIVA() {
+            return IVA;
+        }
+
+        public void setIVA(String IVA) {
+            this.IVA = IVA;
+        }
+    }
